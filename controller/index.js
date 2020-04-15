@@ -4,7 +4,12 @@ let indexHTML = ''///codul html in string
 let indexCSS = '' ///codul css in string
 let indexJS = ''  ///codul js in string
 
-
+function exempleAPI(req,res)
+{
+  res.statusCode = 200
+  res.setHeader('Content-Type', 'application/json')
+  res.write(JSON.stringify({ success: true, message: 'example ran successfully' }))
+}
 function getIndexHTML (req, res) {
   try {
     res.statusCode = 200
@@ -53,4 +58,6 @@ function getIndexJS (req, res) {
     res.write('Internal server error')
   }
 }
-module.exports = { getIndexHTML, getIndexCSS, getIndexJS }
+
+module.exports = { getIndexHTML, getIndexCSS, getIndexJS, exempleAPI}
+

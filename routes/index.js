@@ -5,6 +5,7 @@ var router = new Router()
 
 
 router.get('/', indexController.getIndexHTML)
+router.get('/exemplu', indexController.exempleAPI)
 router.get('/index', indexController.getIndexHTML)
 router.get('/index.html', indexController.getIndexHTML)
 router.get('/index.css', indexController.getIndexCSS)
